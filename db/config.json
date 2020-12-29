@@ -1,0 +1,22 @@
+[
+    {
+        "master": [
+            {
+                "username": "Ashish Kumar",
+                "medium": "web"
+            }
+        ],
+        "slave1": [
+            {
+                "content": "uvw",
+                "Snippet": "xyz"
+            }
+        ],
+        "slave2": [
+            {
+                "ImageURL": "abc",
+                "FileName": "def"
+            }
+        ]
+    }
+]
