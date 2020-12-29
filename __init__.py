@@ -19,7 +19,7 @@ def engine(user_data=None,databasename=None):
     try:
         now = datetime.now().strftime("%d/%m/%Y %H:%M:%S")  # Upload time
         if user_data==None:
-            user_data=json.load(open(path+r"/db/config.json",'r'))[0] # User data
+            user_data=json.load(open(path+r"/db/config.json",'r')) # User data
         client = MongoClient(config_dict["mongodb"]) # MongoDB connection string
         if databasename==None:
             mng_db = client[config_dict["databasename"]]  # Database name from config file
