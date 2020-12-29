@@ -31,7 +31,11 @@ def engine(user_data=None,databasename=None):
         slave_collection=list(user_data)
         f={}
         for _,value in enumerate(list(slave_collection)):
-            user_data[value][0].update({"masterId": masterId})
+            try:
+                for i in range(len(user_data[value])):
+                    user_data[value][i].update({"masterId": masterId})
+            except:
+                pass
             f[value] = mng_db[value].insert_many(user_data[value])
         return {"message":"Success"}
     except:
