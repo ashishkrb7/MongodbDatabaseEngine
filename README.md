@@ -58,4 +58,6 @@ This use case is for custom database and custom collection data
 
 # Author
    Ashish Kumar
+# License
+[MIT License](./LICENSE)
 
