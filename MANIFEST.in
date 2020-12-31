@@ -1,0 +1,4 @@
+include LICENSE
+recursive-include MongodbDatabaseEngine requirements.txt
+recursive-include MongodbDatabaseEngine conf/soft.conf
+recursive-include MongodbDatabaseEngine db/config.json

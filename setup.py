@@ -1,15 +1,29 @@
-from distutils.core import setup
+from setuptools import setup
+# from distutils.core import setup
+# read the contents of your README file
+from os import path
+this_directory = path.abspath(path.dirname(__file__))
+with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+    long_description = f.read()
+
 setup(
   name = 'MongodbDatabaseEngine',         # How you named your package folder (MyLib)
   packages = ['MongodbDatabaseEngine'],   # Chose the same as "name"
-  version = '0.1',      # Start with a small number and increase it with every change you make
+  version = '0.0.8',      # Start with a small number and increase it with every change you make
   license='MIT',        # Chose a license from here: https://help.github.com/articles/licensing-a-repository
   description = 'This python package is to create mongodb database, collections automatically using json file and can be integrated with API',   # Give a short description about your library
+  long_description=long_description,
+  long_description_content_type='text/markdown',
   author = 'Ashish Kumar',                   # Type in your name
   author_email = 'ashish.krb7@gmail.com',      # Type in your E-Mail
   url = 'https://github.com/ashishcssom/MongodbDatabaseEngine',   # Provide either the link to your github or to your website
-  download_url = 'https://github.com/ashishcssom/MongodbDatabaseEngine/archive/v_01.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/ashishcssom/MongodbDatabaseEngine/archive/v_008.tar.gz',    # I explain this later on
   keywords = ['MongoDb', 'API', 'Database','python','creater'],   # Keywords that define your package best
+  package_data={
+    'MongodbDatabaseEngine.conf': ['*'],
+    'MongodbDatabaseEngine.db': ['*']
+    },
+  include_package_data=True,
   install_requires=[            # I get to this in a second
           'pymongo',
           'configparser',
